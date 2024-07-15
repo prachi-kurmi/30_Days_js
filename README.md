@@ -1,6 +1,6 @@
 # 30_Days_js
 
-# # Day 1 (Variables and Datatypes)
+## Day 1 (Variables and Datatypes)
 
 1) Know how to declare variable using var , let and const.
 2) Understand the different data types in javascript.
