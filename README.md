@@ -26,3 +26,13 @@
 3) Utilize switch case for control flow concise condition checking.
 4) Apply the ternary operator for concise condition checking.
 5) Combine mutiple conditions to solve more complex problems.
+
+
+
+## Day 4 (Loops)
+
+1) Undertsand and use for loops to iterate over a sequence of numbers.
+2) Utilize while loops for iteration based on a conndition.
+3) Apply do... while loops to ensure the loop body is executed at least once.
+4) Implement nested loops to solve more complex problems.
+5) Use loop control statements (break and continue) to control the flow of loops.
