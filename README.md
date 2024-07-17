@@ -36,3 +36,13 @@
 3) Apply do... while loops to ensure the loop body is executed at least once.
 4) Implement nested loops to solve more complex problems.
 5) Use loop control statements (break and continue) to control the flow of loops.
+
+
+
+## Day 5 (Functions)
+
+1) Understand and define functions using function declaration, expressions, and arrow functions.
+2) Use function parameters and default value effectively.
+3) Create and utilize higher-order functions.
+4) Apply functions to solve common problems and perform calculations.
+5) Enhance code reusability and organization using functions.
