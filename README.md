@@ -55,3 +55,12 @@
 2) Transform and aggregate array data using map, filter, and reduce.
 3) Iterate over arrays using loops and iteration methods.
 4) Understand and work of multi-dimensional arrays.
+
+
+
+## Day 7 (Objects)
+
+1) Create and manipulate objects with properties and methods.
+2) Understand and use the this keyword in object methods.
+3) Work with nested objects and arrays of objects.
+4) Iterate over an objects's properties using loops and built-in methods.
