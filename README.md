@@ -64,3 +64,15 @@
 2) Understand and use the this keyword in object methods.
 3) Work with nested objects and arrays of objects.
 4) Iterate over an objects's properties using loops and built-in methods.
+
+
+
+## Day 8 (ES6+Features)
+
+1) Understand and use templates literals for string interpolation and multi-line strings.
+2) Apply destructing to extract values from arrays and objects.
+3) Utlize spread and rest opearators for array manipulation and funcion arguments.
+4) Define functions with default parameters.
+5) Create objects using enhanced object literals, including methods and computed property names.
+
+   
