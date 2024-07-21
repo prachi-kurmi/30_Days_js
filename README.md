@@ -75,4 +75,13 @@
 4) Define functions with default parameters.
 5) Create objects using enhanced object literals, including methods and computed property names.
 
+
+
+## Day 9 (DOM Manipulation)
+
+1) Select and manipulate DOM elements using Javascript.
+2) Create and append new elements to the console.
+3) Remove elements from the DOM.
+4) Modify attributes and classes of HTML elements.
+5) Add and handle events to make web pages interactive.
    
