@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Day 10 (Activity 3)</title>
+
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2> Activity 3 (Keyboard Events) </h2>
+
+    <h3> ---------- Task 5 ---------- </h3>
+
+    <p> Keydown event listener </p>
+
+    <input type="text" id="inputFiled" placeholder="Result in console">
+
+    <h3> ---------- Task 6 ---------- </h3>
+
+
+    <input type="text" id="inputField2" placeholder="Type something and see in paragraph">
+    <p id="displayText"> You typed </p>
+
+    
+</body>
+
+<script>
+
+    // Task 5: Add a keydown event listener to an input field that logs the key is pressed to the console.
+
+    const inputFiled = document.getElementById("inputFiled")
+
+    inputFiled.addEventListener("keydown", function(event){
+        console.log(`key pressed: ${event.key}`);
+    })
+
+
+    // Task 6: Add a keyup event listener to an input filed that displays the current value in a paragraph.
+
+    const inputField2 = document.getElementById('inputField2');
+    const displayText = document.getElementById('displayText');
+
+    inputField2.addEventListener('keyup', function() {
+        displayText.textContent = inputField2.value;
+    });
+
+
+</script>
+</html>
