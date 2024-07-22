@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Day 10 (Activity 1)</title>
+
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+
+        #image{
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2> Activity 1 (Basic Event Handling) </h2>
+
+    <h3> ---------- Task 1 ---------- </h3>
+    <p id="paragraph"> Debbie knew she was being selfish and unreasonable. She understood why the others in the room were angry and frustrated with her and the way she was acting. In her eyes, it didn't really matter how they felt because she simply didn't care.</p>
+
+    <button id="button"> Click here to change text </button>
+
+    <h3> ---------- Task 2 ---------- </h3>
+
+    <p> Double click the image to change its opacity </p>
+    <img src="https://www.pinkvilla.com/images/2024-04/709597176_haruka.jpg" alt="Changed opacity" id="image">
+
+</body>
+
+
+<script>
+
+    //Task 1: Add a click event listener to a button that changes the text content of a paragraph.
+
+    const para = document.getElementById("paragraph");
+    const button = document.getElementById("button");
+
+    button.addEventListener("click", function(){
+        para.textContent = "The piano sat silently in the corner of the room. Nobody could remember the last time it had been played. The little girl walked up to it and hit a few of the keys. The sound of the piano rang throughout the house for the first time in years"
+    })
+
+
+    //Task 2: Add a double-click event listener to an image that toggles its visibility.
+
+    const image = document.getElementById("image")
+
+    image.addEventListener("dblclick", function(){
+        image.style.opacity = "0.2"
+    })
+
+</script>
+</html>
