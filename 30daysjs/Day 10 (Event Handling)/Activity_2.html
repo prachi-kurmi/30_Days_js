@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Day 10 (Activity 2) </title>
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+
+        #changebg{
+            height: 40px;
+            width: 25%;
+            text-align: center;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2> Activity 2 (Mouse Events) </h2>
+
+    <h3> ---------- Task 3 & Task 4 ---------- </h3>
+
+    <p id="changebg"> over the mouse to changes its color to purple and mouseout to reset its color to green</p>
+
+
+</body>
+
+<script>
+
+    // Task 3: Add a mouseover event listener to an element that changes its background color.
+
+    const changebg = document.getElementById("changebg")
+
+    changebg.addEventListener("mouseover",function(){
+        changebg.style.backgroundColor = "purple"
+    })
+
+
+    // Task 4: Add a mouseout event listener to an element that resets its background color. 
+
+    const changebg1 = document.getElementById("changebg")
+
+    changebg1.addEventListener("mouseout",function(){
+       changebg.style.backgroundColor = ""
+   })
+
+</script>
+</html>
