@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Day 10 (Activity 5) </title>
+
+    <style>
+        body{
+            background-color: #212121;
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h2>Activity 5 (Event Delegation)</h2>
+
+    <h3>---------- Task 9 ----------</h3>
+
+    <p> Click on item and result will be in console</p>
+
+    <ul id="List">
+        <li> Bugatti </li>
+        <li> Supra </li>
+        <li> RollsRoyce</li>
+        <li> Jaguar</li>
+    </ul>
+
+    <h3> ---------- Task 10 ---------- </h3>
+
+    <div id="parentElement">
+        <h4> Click on add item to add item and click on any item and result will be in console </h4>
+        <ul id="dynamicList">
+            <li>Item 1</li>
+            <li>Item 2</li>
+        </ul>
+        <button id="addItemButton">Add Item</button>
+    </div>
+
+    
+</body>
+
+<script>
+
+    // Task 9: Add a click event listener to a list that logs the text content of the clicked list item using event delegation.
+
+    document.getElementById('List').addEventListener('click', function(event) {
+       
+        if (event.target.tagName === 'LI') {
+            console.log('Clicked item:', event.target.textContent);
+        }
+
+    });
+
+
+    // Task 10: Add an event listener to a parent element that listens for events from dynamically added child elements.
+
+    const parentElement = document.getElementById('parentElement');
+    const addItemButton = document.getElementById('addItemButton');
+    const dynamicList = document.getElementById('dynamicList');
+
+   
+    parentElement.addEventListener('click', function(event) {
+  
+        if (event.target.tagName === 'LI') {
+            console.log('Clicked item:', event.target.textContent);
+        }
+    });
+
+
+    addItemButton.addEventListener('click', function() {
+           
+        const newItem = document.createElement('li');
+        newItem.textContent = `Item ${dynamicList.children.length + 1}`;
+            
+        dynamicList.appendChild(newItem);
+
+    });
+
+</script>
+</html>
