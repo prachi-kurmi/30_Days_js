@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 (Activity 4)</title>
+    <style>
+        body {
+            background-color: #212121;
+            color: white;
+            width: 40%;
+        }
+
+        .container {
+            background-color: #fff;
+            color: #212121;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input, select, p {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input, select {
+            background-color: #f9f9f9;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Activity 4 (Form Events)</h2>
+    <h3>---------- Task 7 ----------</h3>
+
+    <form id="Form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+    <h3>---------- Task 8 ----------</h3>
+
+    <div class="container">
+        <label for="options">Choose an option:</label>
+        <select id="options">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+        <p id="selectedValue">Selected value will appear here</p>
+    </div>
+    
+    <script>
+        // Task 7: Add a submit event listener to a form that prevents the default submission and logs the form data to the console.
+        document.getElementById('Form').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            console.log('Name:', name);
+            console.log('Email:', email);
+        });
+
+        // Task 8: Add a change event listener to a select dropdown that displays the selected value in a paragraph.
+        const selectElement = document.getElementById('options');
+        const displayParagraph = document.getElementById('selectedValue');
+
+        selectElement.addEventListener('change', function() {
+            const selectedValue = selectElement.value;
+            displayParagraph.textContent = `You selected: ${selectedValue}`;
+        });
+    </script>
+</body>
+</html>
