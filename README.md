@@ -93,4 +93,13 @@
 2) Understand and handle form events.
 3) Implement event delegation to manage events on dynamically added elements.
 4) Make web pages interactive by reponding to various user action.
-   
+
+
+
+## Day 11 (Promises & Async/Await)
+
+1) Understand and create promises, including handling resolved and rejected states.
+2) Chain multiple promises to perform sequential asynchronous operations.
+3) Use async/await to handle asynchronous code more readably.
+4) Fetch data from public APIs using both promises and async/await.
+5) Manage mutliple concurrent promises using Promise.all and Promise.race.
