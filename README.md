@@ -103,3 +103,15 @@
 3) Use async/await to handle asynchronous code more readably.
 4) Fetch data from public APIs using both promises and async/await.
 5) Manage mutliple concurrent promises using Promise.all and Promise.race.
+
+
+
+## Day 12 (Error Handling)
+
+1) Understand and implement basic error handling using try-catch blocks.
+2) Use finally blocks to execute code regardless of the try-catch outcome.
+3) Create and use custom error classes.
+4) Handle errors in promises using .catch() and within async functions using try-catch.
+5) Implement graceful error handling when making network requests with the fetch API.
+
+
