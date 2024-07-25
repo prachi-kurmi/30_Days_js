@@ -115,3 +115,11 @@
 5) Implement graceful error handling when making network requests with the fetch API.
 
 
+
+## Day 13 (Modules)
+
+1) Create and export functions, objects, and constants using modules.
+2) Import modules using named and default imports.
+3) Use third-party modules installed via npm.
+
+
