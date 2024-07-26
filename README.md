@@ -121,5 +121,18 @@
 1) Create and export functions, objects, and constants using modules.
 2) Import modules using named and default imports.
 3) Use third-party modules installed via npm.
+4) Understand the basics of module bundling (optional).
+
+
+
+## Day 14 (Classes)
+
+1) Define and use classes with properties and methods.
+2) Implement inheritance to extend classes.
+3) Utilize static methods and properties.
+4) Apply getters and setters for encapsulation.
+5) Understand and use private fields in classes (optional).
+
+
 
 
