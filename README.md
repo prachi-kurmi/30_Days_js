@@ -135,4 +135,15 @@
 
 
 
+## Day 15 (Closures)
+
+1) Understand and create closures in Javascript.
+2) Use closures to maintain a private state and create encapsulated modules.
+3) Apply closures in practical scenarios like generating unique IDs and memoization.
+4) Use closures in loops to capture and use variables correctly.
+
+
+
+
+
 
