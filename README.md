@@ -144,6 +144,33 @@
 
 
 
+## Day 16 (Recusrion)
+
+1) Understand and implement basic recursion.
+2) Apply recursion to solve problems with arrays and strings.
+3) Use recursion for searching and counting elements in arrays.
+4) Perform tree traversal and calculate tree depth using recursion (Optional).
+
+
+
+
+## Day 17 (Data Structures)
+
+1) Implement and use Linked List for dynamic data storage.
+2) Use stacks for LIFO (Last-In-First-Out) operation and reverse data.
+3) Use queues for LIFO (Last-In-First-Out) operations and stimulate real-world scwenarios.
+4) Implement binary trees for hierarchical data storage and traversal.
+
+
+
+## Day 18 (Algorithms)
+
+1) Implement and understand common sorting algorithms.
+2) Implement and understand commom searching algorithms.
+3) Solve string manipulation problems using algorithms.
+4) Perform array operations using algorithms.
+   
+
 
 
 
