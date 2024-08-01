@@ -169,7 +169,16 @@
 2) Implement and understand commom searching algorithms.
 3) Solve string manipulation problems using algorithms.
 4) Perform array operations using algorithms.
-   
+
+
+
+## Day 19 (Regular Expressions)
+
+1) Understand and create basic regular expressions.
+2) Use character classes and quantifiers in regular expressions.
+3) Implement grouping and capturing in regular expressions.
+4) Apply assertions and boundaries in regular expressions.
+5) Use regular expressions for practical applications like validating passwords and URLs.
 
 
 
