@@ -182,4 +182,22 @@
 
 
 
+## Day 20 (LocalStorage and SessionStorage)
+
+1) Understand how to use localStorage and sessionStorage for persistent and session-specific data storage.
+2) Save, retrieve, and remove data from both localStorage and sessionStorage.
+3) Implement form data storage using localStorage and sessionStorage.
+4) Compare and contrast the use cases for  localStorage and sessionStorage.
+
+
+
+## Day 21 (LeetCode Easy)
+
+1) Solve common LeetCode problems.
+2) Apply problem-solving skills to implement algorithms.
+3) Understand and handle edge cases in algorithmic solutions.
+4) Gain confidence in solving easy-level coding challenges on LeetCode.
+
+
+
 
