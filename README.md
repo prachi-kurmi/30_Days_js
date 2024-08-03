@@ -200,4 +200,11 @@
 
 
 
+## Day 22 (LeetCode Medium)
+
+1) Solve common medium-level LeetCode problems.
+2) Apply advance problem-solving skills to implement algorithms.
+3) Understand and handle edge cases in algorithmic solutions.
+4) Gain confidence in solving medium-level coding challenges on LeetCode.
+
 
