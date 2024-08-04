@@ -208,3 +208,10 @@
 4) Gain confidence in solving medium-level coding challenges on LeetCode.
 
 
+
+## Day 23 (LeetCode Hard)
+
+1) Solve complex LeetCode problems.
+2) Apply advance problem-solving skills to implement efficient algorithms.
+3) Understand and handle edge cases in hard algorithmic solutions.
+4) Gain confidence in solving Hard-level coding challenges on LeetCode.
