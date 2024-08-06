@@ -1,13 +1,13 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: cursive;
 }
-body{
+body {
     background-color: #96bdc6;
 }
-.container{
+.container {
     background-color: #e0dddd;
     max-width: 600px;
     text-align: center;
@@ -17,13 +17,13 @@ body{
     margin-top: 40px;
     border-radius: 5px;
 }
-form{
+form {
     display: flex;
     justify-content: space-between;
     margin: 30px;
     align-items: center;
 }
-form input[type="text"]{
+form input[type="text"] {
     padding: 10px;
     font-size: 18px;
     width: 70%;
@@ -31,7 +31,7 @@ form input[type="text"]{
     outline: none;
     border-radius: 5px;
 }
-form input[type="submit"]{
+form input[type="submit"] {
     padding: 10px 20px;
     border: none;
     background-color: #c0645a;
@@ -41,34 +41,34 @@ form input[type="submit"]{
     cursor: pointer;
     transition: all 0.2s ease-in;
 }
-form input[type="submit"]:hover{
+form input[type="submit"]:hover {
     background-color: rgb(171, 75, 75);
 }
-.icon img{
+.icon img {
     width: 100px;
     height: 100px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
-.temp{
+.temp {
     font-size: 40px;
     font-weight: 1000;
     margin-top: 10px;
 }
-.desc{
+.desc {
     font-size: 30px;
     font-weight: 700;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-.details{
+.details {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
-.details>div{
+.details > div {
     font-size: 18px;
     background-color: #fff;
     padding: 20px;
@@ -78,4 +78,26 @@ form input[type="submit"]:hover{
     text-align: center;
     align-items: center;
     flex: 1;
+}
+.forecast {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.forecast-data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.forecast-item {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    width: 100px;
 }
