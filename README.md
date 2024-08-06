@@ -215,3 +215,21 @@
 2) Apply advance problem-solving skills to implement efficient algorithms.
 3) Understand and handle edge cases in hard algorithmic solutions.
 4) Gain confidence in solving Hard-level coding challenges on LeetCode.
+
+
+
+## Day 24 (Project-1 Weather App)
+
+1) Set up a basic project structure with HTML and CSS.
+2) Use the fetch API to retrieve and display weather data from a public API.
+3) Implement search functionality to fetch weather data for different cities.
+4) Display a 5-day forecast using data from a public API.
+5) Enhance the user interactive with icons and animations to make the weather app more interactive and visually appealing.
+
+
+![Screenshot 2024-08-06 100800](https://github.com/user-attachments/assets/0daf6441-0555-4793-9852-33fdc0a20808)
+
+
+![Screenshot 2024-08-06 100943](https://github.com/user-attachments/assets/9c0bb35e-75e7-429c-8c71-4a957d45e413)
+
+
