@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
+    <link rel="shortcut icon" href="https://cdn.jim-nielsen.com/ios/512/weather-2021-12-07.png?rf=1024" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Weather App</h1>
+        <h1>Weather Dashboard</h1>
         <form action="#">
             <input id="city-name" type="text" placeholder="Enter your city name">
             <input type="submit" value="Get weather">
         </form>
         <div class="weather-data">
-            <div class="icon">
-                
-            </div>
+            <div class="icon"></div>
             <div class="temp"></div>
             <div class="desc"></div>
-          
             <div class="details">
-                <div>Feels Like</div>
-                <div>Humidity</div>
-                <div>Wind Speed</div>
+                <div class="feels-like"></div>
+                <div class="humidity"></div>
+                <div class="wind-speed"></div>
             </div>
         </div>
+        <div class="forecast">
+            <h2>Five Day Forecast</h2>
+            <div class="forecast-data"></div>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
