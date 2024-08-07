@@ -233,3 +233,23 @@
 ![Screenshot 2024-08-06 100943](https://github.com/user-attachments/assets/9c0bb35e-75e7-429c-8c71-4a957d45e413)
 
 
+
+## Day 25 (Project 2: Movie Search)
+
+1) Set up a basic project structure with HTML and CSS.
+2) Use the fetch API to retrieve and display movie data from a public API.
+3) Implement search functionality to fetch and display movie data based on user input.
+4) Fetch and display detailed information about selected movies.
+5) Enhance the user interface with CSS styles and animations to make the movie search app more interactive and visually appealing.
+
+![Screenshot 2024-08-07 123702](https://github.com/user-attachments/assets/81badfbf-7091-414c-abf4-e061ed4aac9c)
+
+
+![Screenshot 2024-08-07 130115](https://github.com/user-attachments/assets/df87e3bb-2bd6-435b-949b-ba48e8d8ef5b) 
+
+
+![Screenshot 2024-08-07 130146](https://github.com/user-attachments/assets/beee97f2-68f4-4d7a-a149-a30f9b0fbff3)
+
+
+
+
