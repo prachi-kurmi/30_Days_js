@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('search-form');
     const searchInput = document.querySelector('.search-input');
     const imageContainer = document.querySelector('.image-container');
-    const apiKey = 'fb263ce0'; // Replace with your OMDb API key
+    const apiKey = ''; // Replace with your OMDb API key
     const searchUrl = `http://www.omdbapi.com/?apikey=${apiKey}&s=`;
 
     form.addEventListener('submit', async (e) => {
