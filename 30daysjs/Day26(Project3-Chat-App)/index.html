@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <link rel="shortcut icon" href="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/chat-app-icon-logo-design-template-770ca6add87165646ba67d1a36dfee4e_screen.jpg?ts=1600190289" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    
+    <section class="chat-section">
+        <div class="logo">
+            <i class="ri-chat-smile-3-fill"></i>
+            <h1>Chit-Chat</h1>
+        </div>
+        <div class="msg-area">
+            <!-- dynamically insert by client.js -->
+        <div>
+            <textarea id="textarea" cols="30" rows="1" placeholder="Start Chatting....."></textarea>
+        </div>
+    </section>
+    <script src="socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
