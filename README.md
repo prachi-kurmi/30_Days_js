@@ -252,4 +252,27 @@
 
 
 
+## Day 26 (Project 3: Chat-App)
+
+1) Set up basic project structure with HTML ans CSS.
+2) Create a WebSocket server using Node.js and Express.
+3) Establish a WebSocket connection from the client side to send and receive messages.
+4) Build a chat interface to display and send messages.
+5) Add user authentication and display usernames in the chat.
+6) Enhance the user interface with CSS styles and animations to make the chat application more interactive and visually appealing.
+
+
+
+![Screenshot 2024-08-08 140045](https://github.com/user-attachments/assets/91735790-ed65-4010-b594-e1d73a804eb7)
+
+
+
+![Screenshot 2024-08-08 143707](https://github.com/user-attachments/assets/dac433e6-4d7e-4134-85d0-606ed731567d)
+
+
+
+https://github.com/user-attachments/assets/6787e6a2-31ef-417b-ba9a-a9c97b4d1096
+
+
+
 
