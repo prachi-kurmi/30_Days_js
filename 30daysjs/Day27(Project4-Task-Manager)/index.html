@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Task Manager </title>
+    <link rel="shortcut icon" href="https://previews.123rf.com/images/flatvector/flatvector1707/flatvector170700788/81361657-task-manager-icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <h1>Your Planner</h1>
+        <form id="task-form">
+            <label for="task-date">Title of your task</label>
+            <input type="text" id="task-title" placeholder="Enter Title" required/>
+            <label for="task-description">Description of your task</label>
+            <textarea id="task-description" placeholder="Enter Description" required></textarea>
+            <label for="task-date" required>Due Date</label>
+            <input type="date" id="task-date"/>
+            <button type="submit">Add Task</button>
+        </form>
+        <ul id="task-display"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
