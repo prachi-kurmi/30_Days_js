@@ -270,9 +270,27 @@
 ![Screenshot 2024-08-08 143707](https://github.com/user-attachments/assets/dac433e6-4d7e-4134-85d0-606ed731567d)
 
 
-
 https://github.com/user-attachments/assets/6787e6a2-31ef-417b-ba9a-a9c97b4d1096
 
 
+
+## Day 27 (Project-4: Task-Management)
+
+1) Set up a basic project structure with HTML and CSS.
+2) Implement task creation, reading, updating, and deletion functionalities.
+3) Handle form submission to create new tasks and display them in the task list.
+4) Update existing tasks and refresh the display with edited task details.
+5) Delete tasks from the list with a confirmation dialog to prevent accidental deletions.
+6) Style the task management app to make it visually appealing and user-friendly.
+
+
+
+![Screenshot 2024-08-09 134835](https://github.com/user-attachments/assets/1c5bacf2-878f-415c-815a-341b8b40ad3f)
+
+
+![Screenshot 2024-08-09 135703](https://github.com/user-attachments/assets/d0c74de7-d32d-4527-ad4d-9bdb3a1fe92c)
+
+
+https://github.com/user-attachments/assets/bed7a6b0-9d27-4c70-86f0-897f8a4befdb
 
 
