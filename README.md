@@ -294,3 +294,34 @@ https://github.com/user-attachments/assets/6787e6a2-31ef-417b-ba9a-a9c97b4d1096
 https://github.com/user-attachments/assets/bed7a6b0-9d27-4c70-86f0-897f8a4befdb
 
 
+
+## Day 28 (Project-5: E-Commerce)
+
+1) Set up a basic structure with HTML and CSS.
+2) Dynamically generate and display a product listing from product data.
+3) Implement a shopping cart that allows users to add products, update quantities, and remove items.
+4) Create a checkout form to collect user information and simulate the checkout process.
+5) Enhance the user interface with CSS styles to make the e-commerce website visually appealing and user-friendly.
+
+
+
+![Screenshot 2024-08-10 215143](https://github.com/user-attachments/assets/18da7445-7602-4125-a781-4f1e763f4000)
+
+
+
+![Screenshot 2024-08-10 215546](https://github.com/user-attachments/assets/48af60c2-d386-4f13-a2d9-f9d9a3a680a7)
+
+
+![Screenshot 2024-08-10 220534](https://github.com/user-attachments/assets/e7aee736-b02e-4fe1-9df4-88259b9d85a2)
+
+
+
+
+
+https://github.com/user-attachments/assets/cad95e39-f79d-4cbe-8181-053ad121667b
+
+
+
+
+
+
