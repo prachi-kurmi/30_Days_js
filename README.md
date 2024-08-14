@@ -322,6 +322,17 @@ https://github.com/user-attachments/assets/cad95e39-f79d-4cbe-8181-053ad121667b
 
 
 
+## Day 29 & Day 30 : (Project-6 Social-Media Dashboard)
 
+1) Set up a comprehensive project structure with HTML and CSS.
+2) Implement user authentication, including registration and login, with input validation.
+3) Create and update user profiles, displaying user information and allowing updates.
+4) Handle creating and displaying posts with user-specific details.
+5) Implement post interactions like liking and commenting, with real-time updates.
+6) Create a notification system to alert users of new interactions on their posts.
+
+
+
+https://github.com/user-attachments/assets/5b870637-638e-4956-be20-bc160f3310a3
 
 
