@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100vh;
+            padding: 20px;
+        }
+
+        #sidebar {
+            width: 20%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        #sidebar button {
+            width: 100%;
+            padding: 15px;
+            background-color: #1877f2;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #sidebar button:hover {
+            background-color: #1655c0;
+        }
+
+        #dashboard {
+            width: 60%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #post-form {
+            margin-bottom: 20px;
+        }
+
+        #post-form input[type="text"],
+        #post-form input[type="file"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #post-form button {
+            padding: 10px 20px;
+            background-color: #1877f2;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #post-form button:hover {
+            background-color: #1655c0;
+        }
+
+        #post-feed {
+            margin-top: 20px;
+        }
+
+        .post {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .post p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+
+        .post img {
+            width: 300px;
+            height: auto;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+
+        .post .username {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 10px;
+        }
+
+        .like-btn,
+        .comment-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #e9ecef;
+            color: #333;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 12px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .like-btn:hover,
+        .comment-btn:hover {
+            background-color: #ddd;
+        }
+
+        .like-btn i,
+        .comment-btn i {
+            margin-right: 6px;
+        }
+
+        .comment-section {
+            margin-top: 10px;
+            display: none;
+        }
+
+        .comment {
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            margin-top: 5px;
+        }
+
+        #notifications-section {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        #notifications-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        #notifications-list li {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #clear-notifications {
+            width: 100%;
+            padding: 10px;
+            background-color: #f44336;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        #clear-notifications:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="sidebar">
+        <button onclick="window.location.href='profile.html'">Profile</button>
+        <div id="notifications-section">
+            <h3>Notifications</h3>
+            <ul id="notifications-list">
+                <!-- Notifications will be dynamically added here -->
+            </ul>
+            <button id="clear-notifications">Clear Notifications</button>
+        </div>
+    </div>
+
+    <div id="dashboard">
+        <div id="post-form">
+            <h2>Create a New Post</h2>
+            <form id="new-post-form">
+                <input type="text" id="post-text" placeholder="What's on your mind?" required>
+                <input type="file" id="post-image" accept="image/*">
+                <button type="submit">Post</button>
+            </form>
+        </div>
+        <div id="post-feed">
+            <!-- Posts will be displayed here -->
+        </div>
+    </div>
+
+        <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const postForm = document.getElementById('new-post-form');
+        const postFeed = document.getElementById('post-feed');
+        let posts = JSON.parse(localStorage.getItem('posts')) || [];
+        const username = localStorage.getItem('username') || 'Anonymous';
+
+        function getBase64(file, callback) {
+            const reader = new FileReader();
+            reader.onload = () => callback(reader.result);
+            reader.readAsDataURL(file);
+        }
+
+        function savePost(text, image) {
+            const allPosts = JSON.parse(localStorage.getItem('posts')) || [];
+            allPosts.push({ text, image });
+            localStorage.setItem('posts', JSON.stringify(allPosts));
+        }
+
+        postForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            const postText = document.getElementById('post-text').value;
+            const postImage = document.getElementById('post-image').files[0];
+
+            if (postText || postImage) {
+                let imageUrl = null;
+                if (postImage) {
+                    getBase64(postImage, (base64Image) => {
+                        imageUrl = base64Image;
+                        const newPost = {
+                            id: posts.length + 1,
+                            text: postText,
+                            image: imageUrl,
+                            likes: 0,
+                            comments: [],
+                            username: username,
+                            timestamp: new Date().toLocaleString(),
+                        };
+
+                        posts.push(newPost);
+                        localStorage.setItem('posts', JSON.stringify(posts));
+                        displayPosts();
+                        postForm.reset();
+                    });
+                } else {
+                    const newPost = {
+                        id: posts.length + 1,
+                        text: postText,
+                        image: imageUrl,
+                        likes: 0,
+                        comments: [],
+                        username: username,
+                        timestamp: new Date().toLocaleString(),
+                    };
+
+                    posts.push(newPost);
+                    localStorage.setItem('posts', JSON.stringify(posts));
+                    displayPosts();
+                    postForm.reset();
+                }
+            }
+        });
+
+        function displayPosts() {
+            postFeed.innerHTML = '';
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+
+                const comments = Array.isArray(post.comments) ? post.comments : [];
+
+                const postContent = `
+                    <span class="username">${post.username}</span>
+                    <p>${post.text}</p>
+                    ${post.image ? `<img src="${post.image}" class="post-image" alt="Post Image">` : ''}
+                    <div class="post-actions">
+                        <button class="like-btn" onclick="likePost(${post.id})">
+                           <i class="ri-heart-3-fill"></i> Like (${post.likes})
+                        </button>
+                        <button class="comment-btn" onclick="toggleCommentSection(${post.id})">
+                           <i class="ri-discuss-fill"></i> Comment
+                        </button>
+                    </div>
+                    <div class="comment-section" id="comment-section-${post.id}">
+                        <input type="text" placeholder="Write a comment..." onkeypress="addComment(event, ${post.id})">
+                        <div id="comments-${post.id}">
+                            ${comments.map(comment => `<div class="comment"><strong>${comment.username}</strong>: ${comment.text}</div>`).join('')}
+                        </div>
+                    </div>
+                `;
+
+                postElement.innerHTML = postContent;
+                postFeed.appendChild(postElement);
+            });
+        }
+
+        displayPosts();
+    });
+
+    function addNotification(message) {
+        const notificationsList = document.getElementById('notifications-list');
+        const newNotification = document.createElement('li');
+        newNotification.textContent = message;
+        notificationsList.appendChild(newNotification);
+
+        const storedNotifications = JSON.parse(localStorage.getItem('notifications')) || [];
+        storedNotifications.push(message);
+        localStorage.setItem('notifications', JSON.stringify(storedNotifications));
+    }
+
+    function loadNotifications() {
+        const storedNotifications = JSON.parse(localStorage.getItem('notifications')) || [];
+        const notificationsList = document.getElementById('notifications-list');
+        notificationsList.innerHTML = '';
+        storedNotifications.forEach(notification => {
+            const newNotification = document.createElement('li');
+            newNotification.textContent = notification;
+            notificationsList.appendChild(newNotification);
+        });
+    }
+
+    function clearNotifications() {
+        localStorage.removeItem('notifications');
+        loadNotifications();
+    }
+
+    document.getElementById('clear-notifications').addEventListener('click', clearNotifications);
+
+    loadNotifications();
+
+    function toggleCommentSection(postId) {
+        const commentSection = document.getElementById(`comment-section-${postId}`);
+        commentSection.style.display = commentSection.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function likePost(postId) {
+        const posts = JSON.parse(localStorage.getItem('posts')) || [];
+        const postIndex = posts.findIndex(post => post.id === postId);
+        if (postIndex !== -1) {
+            posts[postIndex].likes += 1;
+            localStorage.setItem('posts', JSON.stringify(posts));
+            document.dispatchEvent(new Event('DOMContentLoaded'));
+            addNotification(`Your post get like `);
+        }
+    }
+
+    function addComment(event, postId) {
+        if (event.key === 'Enter') {
+            const commentText = event.target.value;
+            const posts = JSON.parse(localStorage.getItem('posts')) || [];
+            const postIndex = posts.findIndex(post => post.id === postId);
+            if (postIndex !== -1) {
+                posts[postIndex].comments.push({ username: localStorage.getItem('username'), text: commentText });
+                localStorage.setItem('posts', JSON.stringify(posts));
+                document.dispatchEvent(new Event('DOMContentLoaded'));
+                event.target.value = '';
+                addNotification(`Your post get comment`);
+            }
+        }
+    }
+</script>
+
+    
+</body>
+
+</html>

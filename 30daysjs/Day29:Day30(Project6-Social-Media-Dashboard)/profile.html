@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .profile-container {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            width: 350px;
+            text-align: center;
+        }
+
+        .profile-container h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 22px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background-color: #ddd;
+            background-image: url('https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?size=338&ext=jpg&ga=GA1.1.2008272138.1723593600&semt=ais_hybrid');
+            background-size: cover;
+            background-position: center;
+            border: 4px solid #1877f2;
+        }
+
+        .profile-info {
+            margin-bottom: 25px;
+        }
+
+        .profile-info label {
+            display: block;
+            text-align: left;
+            margin-bottom: 7px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        .profile-info input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: #f9f9f9;
+        }
+
+        .profile-actions {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .profile-actions button {
+            padding: 10px 20px;
+            background-color: #1877f2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .profile-actions button:hover {
+            background-color: #1558b0;
+        }
+
+        .posts-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 800px;
+            margin-top: 25px;
+        }
+
+        .post {
+            background: #f7f7f7;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .post p {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .post img {
+            width: 80%;
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #ddd;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="profile-container">
+        <div class="profile-img"></div>
+        <h2>User Profile</h2>
+        <div class="profile-info">
+            <label for="username">Username</label>
+            <input type="text" id="username" value="" disabled>
+            <label for="password">Password</label>
+            <input type="password" id="password" value="" disabled>
+        </div>
+        <div class="profile-actions">
+            <button id="edit-btn">Edit</button>
+            <button id="save-btn" style="display:none;">Save</button>
+        </div>
+    </div>
+
+    <div class="posts-container" id="posts-container">
+        <h2>All Posts</h2>
+        <!-- Posts will be dynamically inserted here -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+            const editBtn = document.getElementById('edit-btn');
+            const saveBtn = document.getElementById('save-btn');
+            const postsContainer = document.getElementById('posts-container');
+
+            
+            const storedUsername = localStorage.getItem('username');
+            const storedPassword = localStorage.getItem('password');
+
+            
+            if (storedUsername) {
+                usernameInput.value = storedUsername;
+            }
+
+            if (storedPassword) {
+                passwordInput.value = storedPassword;
+            }
+
+            
+            editBtn.addEventListener('click', () => {
+                usernameInput.disabled = false;
+                passwordInput.disabled = false;
+                editBtn.style.display = 'none';
+                saveBtn.style.display = 'inline-block';
+            });
+
+
+            saveBtn.addEventListener('click', () => {
+                localStorage.setItem('username', usernameInput.value);
+                localStorage.setItem('password', passwordInput.value);
+                usernameInput.disabled = true;
+                passwordInput.disabled = true;
+                editBtn.style.display = 'inline-block';
+                saveBtn.style.display = 'none';
+            });
+
+    
+            const posts = JSON.parse(localStorage.getItem('posts')) || [];
+
+            posts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'post';
+
+                const imageHtml = post.image ? `<img src="${post.image}" alt="Post Image">` : '';
+                
+                postElement.innerHTML = `
+                    <p>${post.text || ''}</p>
+                    ${imageHtml}
+                `;
+
+                postsContainer.appendChild(postElement);
+            });
+        });
+    </script>
+</body>
+
+</html>
