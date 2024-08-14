@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buzz Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2 id="formTitle">Login</h2>
+        <form id="authForm">
+            <div id="signupFields" style="display: none;">
+                <label for="signupUsername">Username</label>
+                <input type="text" id="signupUsername" name="signupUsername">
+
+                <label for="signupEmail">Email</label>
+                <input type="email" id="signupEmail" name="signupEmail">
+
+                <label for="signupPassword">Password</label>
+                <input type="password" id="signupPassword" name="signupPassword">
+
+                <label for="signupReenterPassword">Re-enter Password</label>
+                <input type="password" id="signupReenterPassword" name="signupReenterPassword">
+            </div>
+
+            <div id="loginFields">
+                <label for="loginUsername">Username</label>
+                <input type="text" id="loginUsername" name="loginUsername" required>
+
+                <label for="loginPassword">Password</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+            </div>
+
+            <button type="submit" id="submitButton">Login</button>
+        </form>
+        <p id="toggleMessage">Don't have an account? <span id="toggleButton">Signup</span></p>
+        <p id="message"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
